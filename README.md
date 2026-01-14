@@ -26,21 +26,17 @@ This project is part of a 2-repository system.
    mkdir KERI-IT-OT-System
    cd KERI-IT-OT-System
 ```
-```
 
 2. **Clone Both Repositories Here**
 ```bash
 git clone [https://github.com/Saassoso/keri-gateway-it-ot.git](https://github.com/Saassoso/keri-gateway-it-ot.git) gateway
 git clone [https://github.com/Saassoso/keri-anchor-contract.git](https://github.com/Saassoso/keri-anchor-contract) contract
-
 ```
 
 
 3. **Create Shared Environment**
 * **Virtual Env:** Create `keri-env` in this main folder.
 * **Config:** Create a `.env` file in this main folder.
-
-
 
 **Final Structure:**
 
