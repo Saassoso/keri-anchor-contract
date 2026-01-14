@@ -5,7 +5,7 @@
 
 This is the **Blockchain Layer** of the system. It deploys the `KERIAnchor` smart contract, which acts as an immutable registry for KERI event hashes.
 
-## 📜 Smart Contract: `KERIAnchor.sol`
+##  Smart Contract: `KERIAnchor.sol`
 
 The contract provides a simple, secure storage for:
 * **AID (Identity):** The ID of the drone.
@@ -14,7 +14,43 @@ The contract provides a simple, secure storage for:
 
 It uses `Ownable` to ensure only the authorized Bridge can write data, while anyone can verify it.
 
-## 🚀 Setup & Deployment
+##  Setup & Deployment
+
+##  System Installation (Required)
+
+This project is part of a 2-repository system. To make them work together, please follow this exact folder structure:
+
+1. **Create a Main System Folder**
+   ```bash
+   mkdir KERI-IT-OT-System
+   cd KERI-IT-OT-System
+
+```
+
+2. **Clone Both Repositories Here**
+```bash
+git clone [https://github.com/Saassoso/keri-gateway-it-ot.git](https://github.com/Saassoso/keri-gateway-it-ot.git) gateway
+git clone [https://github.com/Saassoso/keri-anchor-contract.git](https://github.com/Saassoso/keri-anchor-contract) contract
+
+```
+
+
+3. **Create Shared Environment**
+* **Virtual Env:** Create `keri-env` in this main folder.
+* **Config:** Create a `.env` file in this main folder.
+
+
+
+**Final Structure:**
+
+```text
+KERI-IT-OT-System/         <-- YOU ARE HERE
+├── .env                   <-- Shared Keys
+├── keri-env/              <-- Shared Python Environment
+├── contract/              <-- The Blockchain Repo
+└── gateway/               <-- This Python Repo
+
+```
 
 ### 1. Install Dependencies
 ```bash
@@ -59,3 +95,5 @@ Copy this address and paste it into the `CONTRACT_ADDRESS` field in your Python 
 | `npx hardhat compile` | Compiles the Solidity contracts. |
 | `npx hardhat test` | Runs automated tests (if any). |
 | `npx hardhat run scripts/deploy_keri.js` | Deploys the contract. |
+
+
