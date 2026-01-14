@@ -10,9 +10,7 @@ async function main() {
   // Get the deployed address
   const address = await contract.getAddress();
 
-  console.log("✅ Contract deployed to:", address);
-  console.log("\n📝 Copy this address to your .env file:");
-  console.log("CONTRACT_ADDRESS=" + address);
+  console.log(" Contract deployed to:", address);
 }
 
 main()
